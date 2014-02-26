@@ -17,7 +17,7 @@ public class HttpDownload {
 		// instanciando e usando a classe HttpDownload
 		HttpDownload httpDownload = new HttpDownload(new DefaultHttpClient());
 
-		// fazendo o download e salvando em diretório local
+		// fazendo o download e salvando em diretorio local
 		httpDownload.downloadByGet("http://www1.caixa.gov.br/loterias/_arquivos/loterias/D_lotfac.zip", "/tmp/D_lotfac.zip");
 	}
 
