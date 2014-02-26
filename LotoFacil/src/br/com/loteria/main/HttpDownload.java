@@ -17,11 +17,8 @@ public class HttpDownload {
 		// instanciando e usando a classe HttpDownload
 		HttpDownload httpDownload = new HttpDownload(new DefaultHttpClient());
 
-		// fazendo o download do logotipo da google e salvando em diretório
-		// local
-		httpDownload.downloadByGet(
-				"http://www1.caixa.gov.br/loterias/_arquivos/loterias/D_lotfac.zip",
-				"/tmp/D_lotfac.zip");
+		// fazendo o download e salvando em diretório local
+		httpDownload.downloadByGet("http://www1.caixa.gov.br/loterias/_arquivos/loterias/D_lotfac.zip", "/tmp/D_lotfac.zip");
 	}
 
 	// construtor
@@ -38,8 +35,7 @@ public class HttpDownload {
 
 			if (entity != null) {
 				/* salvar arquivo no disco */
-				java.io.FileOutputStream fos = new java.io.FileOutputStream(
-						path);
+				java.io.FileOutputStream fos = new java.io.FileOutputStream(path);
 				entity.writeTo(fos);
 				fos.close();
 			}
