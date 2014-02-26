@@ -1,9 +1,0 @@
-package br.com.loteria.model;
-
-public class ParseLotoFacil {
-
-	public ParseLotoFacil() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

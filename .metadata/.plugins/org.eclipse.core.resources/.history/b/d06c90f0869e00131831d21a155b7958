@@ -1,9 +1,0 @@
-package br.com.loteria.main;
-
-public class HttpDownload {
-
-	public HttpDownload() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
