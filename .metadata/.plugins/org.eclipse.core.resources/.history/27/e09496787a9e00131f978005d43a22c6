@@ -1,0 +1,21 @@
+package br.com.loteria.model;
+
+import java.io.File;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+public class ParseLotoFacil {
+
+	public ParseLotoFacil() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void LerResultados {
+	
+	
+
+	File input = new File("/tmp/input.html");
+	Document doc = Jsoup.parse(input, "UTF-8", "http://example.com/");
+	}
+}

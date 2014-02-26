@@ -1,0 +1,14 @@
+package br.com.loteria.model;
+
+public class LotoFacil extends Loteria {
+
+	public LotoFacil() {
+		super();
+		
+
+	}
+	
+	
+	
+
+}

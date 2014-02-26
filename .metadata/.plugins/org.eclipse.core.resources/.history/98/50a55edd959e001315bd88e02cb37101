@@ -1,0 +1,38 @@
+package br.com.loteria.main;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
+import java.util.zip.ZipInputStream;
+
+public class TesteDescompactarZip {
+
+	public static void main(String[] args) throws IOException {
+		String nomeArquivo = "/tmp/D_lotfac.zip";
+		ZipFile zip = new ZipFile(nomeArquivo);
+		Enumeration arquivos = zip.entries();
+		System.out.println("listando nome dos arquivos metodo 1");
+		while (arquivos.hasMoreElements()) {
+			ZipEntry arquivo = (ZipEntry) arquivos.nextElement();
+			System.out.println(arquivo.getName());
+
+		}
+		zip.close();
+
+		System.out.println("listando nome dos arquivos metodo 2");
+		FileInputStream fis = new FileInputStream(nomeArquivo);
+		ZipInputStream zis = new ZipInputStream(fis);
+		ZipEntry entrada = null;
+		while ((entrada = zis.getNextEntry()) != null) {
+			System.out.println(entrada.getName());
+		}
+		zis.close();
+		fis.close();
+
+		System.out.println("extraindo arquivos");
+
+	}
+
+}

@@ -1,0 +1,31 @@
+package br.com.loteria.main;
+
+import java.io.File;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+public class TesteParser {
+
+	public static void main(String[] args) {
+		try {
+			File input = new File("/tmp/D_LOTFAC.HTM");
+			Document doc = Jsoup.parse(input, "UTF-8", "http://example.com/");
+			
+			//Elements table = doc.getElementsByTag("table");
+			
+			Elements linhas = doc.getElementsByTag("tr");
+			for (Element linha : linhas) {
+				String linkHref = linha.attr("td");
+				String linkText = linha.text();
+				System.out.println(linkText);
+			}
+
+		} catch (Exception e) {
+		}
+
+	}
+
+}

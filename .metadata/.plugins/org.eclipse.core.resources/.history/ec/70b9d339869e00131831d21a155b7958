@@ -1,0 +1,51 @@
+package br.com.loteria.main;
+
+import java.io.*;
+import java.net.URL;
+import java.net.URLConnection;
+
+public class TesteDownload {
+
+	public static void main(String[] args) {
+
+		// http://www1.caixa.gov.br/loterias/_arquivos/loterias/D_lotfac.zip
+
+		String protocolo = "http";
+		String endereco = "www1.caixa.gov.br";
+		String arquivo = "/loterias/_arquivos/loterias/D_lotfac.zip";
+
+		try {
+			// cria URL
+			URL url1 = new URL(protocolo, endereco, arquivo);
+			// abre uma conexao na url criada àcima
+
+			URLConnection con = url1.openConnection();
+			con.setConnectTimeout(0);
+			// tenta conectar.
+			con.connect();
+
+			// arquivo de saida
+			FileOutputStream fileOut = new FileOutputStream("/tmp/D_lotfac.zip");
+
+			int c = 0;
+
+			do {
+				// le o byte
+				c = con.getInputStream().read();
+
+				// escreve o byte no arquivo saida
+				fileOut.write(c);
+
+			} while (c != -1);
+
+			// fecha o arquivo de saida
+			fileOut.close();
+
+			System.out.println("Arquivo baixado com sucesso");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}
