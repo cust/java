@@ -7,5 +7,4 @@ public class Sorteio {
 	private Integer sorteio;
 	private Date dataSorteio;
 	private ArrayList<Boolean> numerosSorteados;
-
 }
