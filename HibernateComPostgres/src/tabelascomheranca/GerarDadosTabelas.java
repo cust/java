@@ -1,4 +1,4 @@
-package tabelas;
+package tabelascomheranca;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

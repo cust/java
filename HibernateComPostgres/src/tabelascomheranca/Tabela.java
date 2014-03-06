@@ -1,4 +1,4 @@
-package tabelas;
+package tabelascomheranca;
 
 import java.util.Date;
 
