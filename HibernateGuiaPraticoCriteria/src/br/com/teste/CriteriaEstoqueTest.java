@@ -9,7 +9,7 @@ import br.com.dao.EstoqueDAO;
 public class CriteriaEstoqueTest {
 
 	public static void main(String[] args) {
-		// exibirTudo();
+		exibirTudo();
 		// exibirRestricaoNome();
 		// exibirBuscaProdlike();
 		// exibirBuscaProdLikend();
@@ -20,7 +20,7 @@ public class CriteriaEstoqueTest {
 		// exibirbuscaProdConjuction();
 		// exibirbuscaOrder();
 		// exibirProjecaoProd();
-		exibirProjecaoProdLista();
+		// exibirProjecaoProdLista();
 		// exibirProjecaoProp();
 		// exibirProjecaoSum();
 	}
