@@ -10,6 +10,18 @@ public class Automovel {
 		return id;
 	}
 
+	public Automovel() {
+
+	}
+
+	public Automovel(int id, String nome, int ano, String fabricantenome) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.ano = ano;
+		this.fabricantenome = fabricantenome;
+	}
+
 	public void setId(int id) {
 		this.id = id;
 	}

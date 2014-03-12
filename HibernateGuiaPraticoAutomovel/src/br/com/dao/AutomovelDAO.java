@@ -1,5 +1,8 @@
 package br.com.dao;
 
+import java.util.List;
+
+import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 
 import br.com.bean.Automovel;
@@ -24,6 +27,14 @@ public class AutomovelDAO extends DAO {
 			System.out.println("erro! rollback");
 			rollback();
 		}
+	}
+
+	/* adicionado metodo para listar que nao existia inicialmente no projeto */
+
+	public List<Automovel> getTodos() {
+		Criteria crit = getSession().createCriteria(Automovel.class);
+		List<Automovel> lista = crit.list();
+		return lista;
 	}
 
 }

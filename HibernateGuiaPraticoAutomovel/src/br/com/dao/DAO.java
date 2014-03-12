@@ -38,4 +38,5 @@ public class DAO {
 		getSession().clear();
 		threadlocal.set(null);
 	}
+
 }
