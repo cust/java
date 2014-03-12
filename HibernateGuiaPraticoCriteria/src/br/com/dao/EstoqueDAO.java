@@ -3,6 +3,7 @@ package br.com.dao;
 import java.util.List;
 
 import org.hibernate.Criteria;
+import org.hibernate.HibernateException;
 import org.hibernate.criterion.Conjunction;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Disjunction;
@@ -12,7 +13,6 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.ProjectionList;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
-import org.hibernate.transform.AliasToBeanResultTransformer;
 
 import br.com.bean.Estoque;
 
@@ -160,4 +160,17 @@ public class EstoqueDAO extends DAO {
 		List lista = crit.list();
 		return lista;
 	}
+
+	/* adicionato metodo para persistir objeto */
+
+	public void salvar(Estoque estoque) {
+		begin();
+		persistir(estoque);
+		try {
+			commit();
+		} catch (HibernateException e) {
+			rollback();
+		}
+	}
+
 }

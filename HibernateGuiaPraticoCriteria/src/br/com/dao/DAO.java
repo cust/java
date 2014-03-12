@@ -17,4 +17,27 @@ public class DAO {
 
 		return session;
 	}
+
+	/* adicionado metodos para persistir dados que nao existiam neste exemplo */
+
+	public void begin() {
+		getSession().beginTransaction();
+	}
+
+	public void commit() {
+		getSession().getTransaction().commit();
+	}
+
+	public void rollback() {
+		getSession().getTransaction().rollback();
+	}
+
+	public void persistir(Object objeto) {
+		getSession().save(objeto);
+	}
+
+	public void close() {
+		getSession().clear();
+		threadlocal.set(null);
+	}
 }

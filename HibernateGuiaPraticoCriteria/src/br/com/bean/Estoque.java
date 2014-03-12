@@ -10,6 +10,14 @@ public class Estoque {
 		// TODO Auto-generated constructor stub
 	}
 
+	public Estoque(int id, String nomeProduto, int qtde, double valorProduto) {
+		super();
+		this.id = id;
+		this.nomeProduto = nomeProduto;
+		this.qtde = qtde;
+		this.valorProduto = valorProduto;
+	}
+
 	public int getId() {
 		return id;
 	}
