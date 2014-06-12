@@ -16,9 +16,10 @@ public class Run {
 		criar();
 	}
 
+	// unico exemplo funcionando e nao alterar o percistense.xml
 	public static void criar() {
 		// http://stackoverflow.com/questions/1989672/create-entity-manager-without-persistence-xml
-		//http://stackoverflow.com/questions/4106078/dynamic-jpa-connection
+		// http://stackoverflow.com/questions/4106078/dynamic-jpa-connection
 		Map<String, String> percistenceProperties = new HashMap<String, String>();
 		percistenceProperties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
 		percistenceProperties.put("hibernate.connection.url", "jdbc:postgresql://localhost:5432/postgres");
