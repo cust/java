@@ -1,5 +1,13 @@
 package dao;
 
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 import model.empresa.Empresa;
 import model.empresa.Financeiro;
 
@@ -43,5 +51,7 @@ public class ConexaoEmpresa {
 		// http://www.guj.com.br/java/219912-pequena-duvida-com-annotationconfiguration-hibernate-resolvido
 
 	}
+
+	
 
 }
